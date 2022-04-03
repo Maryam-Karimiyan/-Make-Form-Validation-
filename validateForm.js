@@ -64,7 +64,7 @@ function validatemessage() {
   return true;
 }
 
-submitbtn.addEventListener("submit", () => {
+function validateForm() {
   if (
     !validatename() ||
     !validatephone() ||
@@ -73,7 +73,11 @@ submitbtn.addEventListener("submit", () => {
   ) {
     submitError.style.display = "block";
     submitError.innerHTML = "Please fix error to submit";
-    setTimeout(function(){submitError.style.display = "none";},3000);
+    setTimeout(function () {
+      submitError.style.display = "none";
+    }, 3000);
     return false;
   }
-});
+}
+
+submitbtn.addEventListener("submit", validateForm());

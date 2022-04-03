@@ -83,7 +83,7 @@ button[type="submit"] {
   font-size: 15px;
   color: #41924b;
 }
-#sibmit-error {
+#submit-error {
   color: red;
   font-size: 14px;
 }
