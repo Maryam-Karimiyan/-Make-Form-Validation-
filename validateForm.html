@@ -16,26 +16,36 @@
       <div class="container">
         <i class="fa-solid fa-paper-plane"></i>
         <form>
-          <div>
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your name" />
+          <div class="info">
+            <label class="identifier">Full Name</label>
+            <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validatename()"/>
+            <span id="name-error"></span>
           </div>
-          <div>
-            <label>Phone No.</label>
-            <input type="tel" placeholder="123 456 790" />
+          <div class="info">
+            <label class="identifier">Phone No.</label>
+            <input type="tel" placeholder="123 456 790" id="contact-phone" onkeyup="validatephone()" />
+             <span id="phone-error"></span>
           </div>
-          <div>
-            <label>Email Id</label>
-            <input type="email" placeholder="Enter Email" />
+          <div class="info">
+            <label class="identifier">Email Id</label>
+            <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateemail()"/>
+             <span id="email-error"></span>
           </div>
-          <div>
-            <label>Your Message</label>
-            <textarea rows="5" placeholder="Enter your message"></textarea>
+          <div class="info">
+            <label class="identifier">Your Message</label>
+            <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validatemessage()"></textarea>
+             <span id="message-error"></span>
           </div>
 
-          <button type="submit">Submit</button>
+          <button class="submitbtn" type="submit">Submit</button>
+           <span id="submit-error"></span>
         </form>
       </div>
     </section>
+
+
+
+
+    <script src="./validateForm.js"></script>
   </body>
 </html>
